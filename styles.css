@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Sen:wght@400;700&display=swap');
+
+*, 
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #32f5c8;
+    --gray: #a9bdc6;
+    --black: #013243;
+    --white: #fff;
+    --Inter: 'Inter', sans-serif;
+    --Sen: 'Sen', sans-serif;
+}
+
+::selection {
+    color: var(--black);
+    background-color: var(--green);
+}
+
+body {
+    background-color: var(--black);
+    min-height: 100vh;
+    min-width: 375px;
+    max-width: 1980px;
+    display: grid;
+    place-items: center;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    position: relative;
+    padding: 1em;
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+#logo {
+    margin-bottom: 10em;
+}
+
+h1 {
+    font-family: var(--Sen);
+    color: var(--green);
+    font-size: 50px;
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px var(--black);
+}
+
+p {
+    font-family: var(--Inter);
+    font-size: 22px;
+    color: var(--gray);
+    max-width: 500px;
+    margin-bottom: 2em;
+}
+
+.container > a {
+    text-decoration: none;
+    font-family: var(--Inter);
+    font-weight: bold;
+    font-size: 22px;
+    color: var(--black);
+    background-color: var(--green);
+    border-radius: 5px;
+    padding: 1em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.3s;
+}
+
+.container > a:hover {
+    color: var(--green);
+    background-color: var(--black);
+    outline: 1px solid var(--green);
+}
+
+.twitter {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 14em;
+}
+
+.twitter a {
+    transition: all 0.3s;
+}
+
+.twitter a:hover {
+    filter: brightness(0) saturate(100%) invert(70%) sepia(93%) saturate(362%) hue-rotate(103deg) brightness(106%) contrast(92%);
+    transform: scale(115%);
+}
+
+.twitter p {
+    margin: 0;
+}
+
+:is(#user1, #user2, #user3, #user4, #user5) {
+    position: absolute;
+    z-index: -1;
+    filter: drop-shadow(0 0 0.75rem hsla(0,0%,0%, 0.25));
+}
+
+#user1, #user4 {
+    display: none;
+}
+
+#user2 {
+    top: 5em;
+    right: 0.25em;
+}
+
+#user3 {
+    top: 8em;
+    left: 3em;
+    max-width: 115px;
+}
+
+#user5 {
+    bottom: 11em;
+    right: 0.15em;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .container {
+        padding: 2em;
+        max-width: 768px;
+    }
+
+    h1 {
+        font-size: 100px;
+        margin-bottom: 0.25em;
+        line-height: 1;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    .twitter {
+        margin-top: 10em;
+    }
+
+    #user1 {
+        display: inline-block;
+        bottom: 22em;
+        right: 3em;
+    }
+    
+    #user2 {
+        top: 2em;
+        right: 1em;
+    }
+    
+    #user3 {
+        top: 5em;
+        left: 2.5em;
+    }
+    
+    #user4 {
+        display: inline-block;
+        bottom: 4em;
+        right: 3em;
+        max-width: 225px;
+    }
+
+    #user5 {
+        top: 11em;
+        right: 10em;
+        bottom: initial;
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .container {
+        padding: 3em 10em;
+        max-width: 1000px;
+    }
+
+    #logo {
+        margin-bottom: 5em;
+    }
+
+    .twitter {
+        margin-top: 6em;
+    }
+
+    #user1 {
+        bottom: 17em;
+        right: 18em;
+    }
+    
+    #user2 {
+        top: 3em;
+        right: 5em;
+        max-width: 150px;
+    }
+    
+    #user3 {
+        top: 8em;
+        left: 4.5em;
+    }
+    
+    #user4 {
+        bottom: 0em;
+        right: 7em;
+    }
+
+    #user5 {
+        top: 7em;
+        right: 16em;
+        max-width: 100px;
+    }
+
+}
